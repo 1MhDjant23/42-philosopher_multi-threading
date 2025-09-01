@@ -14,11 +14,9 @@
 
 void	*start_rouitnes(void *arg)
 {
-	long	n_of_p;
 	t_philo	*philos;
 
 	philos = (t_philo *)arg;
-	n_of_p = philos->data->n_of_philo;
 	while (get_bool(&philos->data->all_ready, &philos->data->ready) == false)
 		;
 	if ((philos->id + 1) % 2 == 0)

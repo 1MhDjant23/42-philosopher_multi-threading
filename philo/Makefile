@@ -11,10 +11,7 @@ CC = cc
 
 CFLAGS = -Wall -Wextra -Werror -pthread
 
-SRCS =	philo.c	error_message.c	philo_utils.c\
-		parsing.c	init_resource.c\
-		cleanner.c	dinner_utils.c	start_dinner.c	getter_setter.c\
-		one_philo.c
+SRCS = $(shell find . -name "*.c" -type f)
 
 HEADER = philo.h
 
@@ -35,6 +32,7 @@ clean:
 
 fclean:	clean
 	@rm -rf $(NAME)
+
 re:	fclean	all
 
 .PHONY: all	clean	fclean	re
